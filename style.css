@@ -3,24 +3,54 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container{
+.container-fluid{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 
 }
 .box{
     width: 380px;
-    height: 350px;
+    min-height: 500px;
     border: 1px solid rgb(159, 223, 41);
     margin: 10px;
     border-radius:10px;
     box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
     padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
 }
+.box button{
+    display: block;
+    border: none;
+    outline: none;
+    background:linear-gradient(to right,#00cfd0,#009fd5) ;
+    padding: 10px 30px;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.box button:hover{
+    border: 2px solid #00cfd0;
+    color:black;
+    box-shadow: 0px 3px 10px #00d0d098;
+    background: transparent;
+}
+
 .image{
     display: block;
     margin: auto;
     width: 160px;
     height: 200px;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #20374e;
+    color: white;
 }

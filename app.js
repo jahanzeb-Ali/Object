@@ -4,18 +4,17 @@ console.log(UsersObj);
 let currentItem;
 let count = 0
 
-let add = document.querySelector('.container')
+let add = document.querySelector('.container-fluid')
 for (const item of UsersObj) {
     add.innerHTML += `<div class="box">
     <img src="${item.image}" class="image">
     <h4>${item.title}</h4>
-    <span>${item.price}</span>
-    <!-- <p>${item.description}</p>-->
+    <span>Price:  $${item.price}</span>
+    
     <span>rating: ${item.rating.rate}</span>
     <span>count: ${item.rating.count}</span>
     <button id="item${++count}" onclick="addItem('item${count}')">Add to cart</button>
 </div>`
-console.log(item.category)
 }
 
 function checkCategory(){
@@ -23,25 +22,20 @@ function checkCategory(){
     add.innerHTML = '';
     for (const item of UsersObj) {
         if(currentItem === item.category){
-        add.innerHTML += `<div class="box">
-        <img src="${item.image}" class="image">
-        <h4>${item.title}</h4>
-        <span>${item.price}</span>
-        <!-- <p>${item.description}</p>-->
-        <span>rating: ${item.rating.rate}</span>
-        <span>count: ${item.rating.count}</span>
-        <button id="item${++count}" onclick="addItem('item${count}')">Add to cart</button>
+            add.innerHTML += `<div class="box" >
+                <img src="${item.image}" class="image">
+                <h4>${item.title}</h4>
+                <span>${item.price}</span>
+                <span>rating: ${item.rating.rate}</span>
+                <span>count: ${item.rating.count}</span>
+                <button id="item${++count}" onclick="addItem('item${count}')">Add to cart</button>
         </div>`
         }
     }
  }
-// // let addItem = document.querySelector("addTo")
-// // addItem.addEventListener('click',()=>{
-// // })
+
+let box1 = document.getElementById('box1')
 function addItem(id){
-    console.log(id)
     let addElement = document.getElementById(id)
     alert(addElement.parentNode.children[1].innerHTML)
 }
-
-// console.log(count);
