@@ -1,0 +1,87 @@
+
+.cart-container{
+    width: 60vw;
+    padding: 20px;
+    max-height: 80vh;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    border-radius:10px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    transition: all 0.3s;
+    /* overflow-y: scroll; */
+}
+.container-shadow {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.705);
+    user-select: none;
+    display: none;
+    position: fixed;
+    top: 0;
+    transition: all 0.3s;
+}
+.box2{
+    padding: 40px 40px 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.btn-box{
+    width: 200px;
+}
+.btn-box button{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #d6d5cf;
+    outline: none;
+}
+.add-cart-btn{
+    background-color: transparent;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    border: 1px solid #d6d5cf;
+    transition: all 0.4s;
+}
+.add-cart-btn:hover{
+    background-color: black;
+    color:white;
+}
+.btn-box button.active{
+    border: 1px solid black;
+}
+
+.titleProduct {
+    height: 2rem;
+    overflow-y: hidden;
+}
+.cancel-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height:40px;
+    border: 2px solid red;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+    outline: none;
+}
+.cancel-btn:hover{   
+    background-color: red;
+    color: white;
+}
+.fa-star{
+    color: gold;
+}
